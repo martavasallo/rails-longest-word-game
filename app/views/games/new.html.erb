@@ -1,11 +1,11 @@
+<div>
+  <h1><%= @letters  %></h1>
+</div>
 
-<% random_letters = ('a'..'z').to_a.sample(10) %>
-<%= random_letters.join(' ') %>
-
-<%# <form action="/your-action" method="POST">
-  <!-- Your form fields go here -->
-
+<form action="/score" method="POST">
+ <h4>What is the longest word you can find</h2>
+  <data-turbo="false">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <input type="text" name="result">
   <button type="submit" class="btn btn-primary">Submit</button>
-</form> %>
-
-
+</form>
